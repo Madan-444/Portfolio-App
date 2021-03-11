@@ -1,0 +1,17 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+div {
+    height: 200px;
+    width: 150px;
+
+}
+.div-1 {
+    background-color: lightpink;
+    padding: 10px;
+}
+.div-2 {
+    background-color: lightseagreen;
+}
