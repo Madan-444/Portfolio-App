@@ -105,6 +105,7 @@ ul.header__main-nav--links {
   align-items: center;
   font-size: 3rem;
   justify-content: flex-end;
+  font-family: "Baloo Tamma 2",cursive;
 }
 
 ul.header__main-nav--links li {
@@ -154,6 +155,62 @@ section#showcase {
     background-image: url("img/full-bg-07.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.showcase__content {
+  background-color: var(--secondary-color-m);
+  padding: calc(1rem + 2vw);
+  height: calc(3rem + 20vmax);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.showcase__content--title {
+  font-size: calc(1rem + 2vw );
+  color:white;
+}
+.showcase__content--para {
+  font-size: calc(1.5rem + 0.35vw);
+  color:rgb(175, 243, 50);
+  font-family: "Baloo Tamma 2",cursive;
+}
+.showcase__content--link:link,
+.showcase__content--link:visited {
+  padding: 1rem;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  position:relative;
+  z-index: 1;
+
+}
+.showcase__content--link:link::after,
+.showcase__content--link:visited::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+.showcase__content--link:hover::after,
+.showcase__content--link:active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  z-index: -1;
 }
 
 @media screen and (max-width: 610px) {
