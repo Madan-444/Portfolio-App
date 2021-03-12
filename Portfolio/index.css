@@ -405,15 +405,16 @@ section#skills {
 
 .skills__design,
 .skills__coding {
-  text-transform: uppercase;
   padding: calc(1rem + 2vw);
   flex-basis: 60rem;
   flex-grow: 1;
+  font-family: "Baloo Tamma 2",cursive;
 }
 .skills__design--title,
 .skills__coding--title {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 
 
 }
@@ -439,10 +440,117 @@ section#skills {
   vertical-align: middle;
   height: 2rem;
   background-color: var(--secondary-color);
-  border-radius: 3rem;
-  width: 4rem;
+  border-radius: 1rem 0 0 1rem;
+
 }
 
+.skills__design--progess-1 {
+  animation: design-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-1 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 60%;
+  }
+
+}
+.skills__design--progess-2 {
+  animation: design-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-2 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 20%;
+  }
+
+}
+.skills__design--progess-3 {
+  animation: design-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-3 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 50%;
+  }
+
+}
+.skills__design--progess-4 {
+  animation: design-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-4 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 70%;
+  }
+
+}
+
+/* for coding skill  */
+.skills__coding--progess-1 {
+  animation: coding-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes coding-1 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 50%;
+  }
+
+}
+.skills__coding--progess-2 {
+  animation: coding-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes coding-2 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 40%;
+  }
+
+}
+.skills__coding--progess-3 {
+  animation: coding-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes coding-3 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 30%;
+  }
+
+}
+.skills__coding--progess-4 {
+  animation: coding-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes coding-4 {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 20%;
+  }
+
+}
+
+
+/* ------------- max 1500px  --------------------*/
+@media screen and (min-width: 1500px) {
+  body {
+    width: 1510px;
+    margin: 0 auto;
+  }
+}
 /*------------- Max width : 900 px ------------------------*/
 @media screen and (max-width: 900px) {
   section#showcase {
