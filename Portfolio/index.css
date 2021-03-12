@@ -335,6 +335,114 @@ section#about-me {
   transform-origin: top;
 }
 
+/* ----------------------------Service Sections ------------------- */
+section#services {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6rem 2rem 2rem;
+  background-color: var(--primary-color);
+}
+.service {
+  padding: 4rem;
+  margin: 0 2rem 4rem;
+  flex-basis: 30rem;
+  flex-grow: 1;
+  background-color: var(--secondary-color);
+  border-bottom: 0.2rem solid var(--secondary-color);
+  border-right: 0.2rem solid var(--secondary-color);
+  border-left: 0.2rem solid var(--secondary-color);
+  
+  position: relative;
+  z-index: 1;
+
+}
+.service::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(1,0, 0, 1);
+  z-index: -1;
+}
+.service:hover::after,
+.service:active::after {
+  transform: scaleX(1);
+}
+.service i,
+.service .services--title {
+  margin-bottom: 2rem;
+}
+.service i {
+  font-size: 2.5rem;
+  color: white;
+}
+.services--title {
+  font-size: 1.8rem;
+  font-family: "Baloo Tamma 2",cursive;
+  text-transform: uppercase;
+}
+p.services--para {
+  font-size: 1.3rem;
+}
+
+/* Skills  */
+section#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: calc(1rem + 2vw);
+  background-color: var(--tertiary-color);
+}
+
+.skills__design,
+.skills__coding {
+  text-transform: uppercase;
+  padding: calc(1rem + 2vw);
+  flex-basis: 60rem;
+  flex-grow: 1;
+}
+.skills__design--title,
+.skills__coding--title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+
+
+}
+.skills__design h4,
+.skills__coding h4 {
+  color:white;
+  font-size: 1.5rem;
+}
+.skills__design--progess,
+.skills__coding--progess {
+  position: relative;
+  display: block;
+  padding:0.5rem;
+  border-radius: 3rem;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.skills__design--progess span,
+.skills__coding--progess span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 2rem;
+  background-color: var(--secondary-color);
+  border-radius: 3rem;
+  width: 4rem;
+}
+
 /*------------- Max width : 900 px ------------------------*/
 @media screen and (max-width: 900px) {
   section#showcase {
@@ -431,5 +539,18 @@ section#about-me {
   }
   ul.header__main-nav--links li.fade {
       opacity: 1;
+  }
+  section#showcase {
+    background-position: 80%;
+  }
+  section#services {
+    padding: 6rem 3rem 2rem;
+    margin: 0 0 valc(1rem +2vw);
+  }
+  .services--title {
+    font-size: calc(1.2rem + 2vw);
+  }
+  .services--para {
+    font-size: calc(1.2rem + 2vw);
   }
 }
