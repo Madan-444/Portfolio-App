@@ -236,7 +236,10 @@ section#work {
 
   padding: 2rem;
   background-color: var(--tertiary-color);
+
+
 }
+
 div.work__card {
   padding: 2rem;
   flex-basis: 40rem;
@@ -268,8 +271,68 @@ section#about-me {
 .about-me__img,
 .about-me__content {
   flex-basis: 40rem;
-  padding: 2rem;
+  padding: 1rem;
   flex-grow: 1;
+}
+.about-me__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-me__content--title {
+  font-size: 3rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  position: relative;
+}
+.about-me__content--title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 30%;
+  background-color: var(--primary-color);
+}
+.about-me__content--title,
+.about-me__content--para {
+  margin-bottom: 2rem;
+  letter-spacing: 0.2rem;
+}
+.about-me__content--para {
+  font-size: 1.8rem;
+  
+}
+.about-me__content--link:link,
+.about-me__content--link:visited {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  position: relative;
+  z-index: 1;
+}
+.about-me__content--link:link::after,
+.about-me__content--link:visited::after {
+  content: "";
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  z-index: -1;
+}
+.about-me__content--link:hover::after,
+.about-me__content--link:active::after {
+  transform: scaleY(1);
+  transform-origin: top;
 }
 
 /*------------- Max width : 900 px ------------------------*/
